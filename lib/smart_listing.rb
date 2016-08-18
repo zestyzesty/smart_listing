@@ -56,7 +56,7 @@ module SmartListing
 
       set_param(:per_page, @per_page, cookies) if @options[:memorize_per_page]
 
-      @count = @collection.size
+      @count = @collection.count
       @count = @count.length if @count.is_a?(Hash)
 
       # Reset @page if greater than total number of pages
